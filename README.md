@@ -1,4 +1,6 @@
 # FILE-RECOVERY-USING-AUTOPSY-SOFTWARE
+#### Name - RAGUL RAAJAN T
+#### Reg. No. - 212223100043
 
 ## AIM
 To use **Autopsy Digital Forensics Tool** to retrieve deleted files from a disk image.
@@ -90,8 +92,6 @@ Navigate to the "Deleted Files" section in Autopsy and examine or recover the de
 
 ## Output :
 
-#### Name - RAGUL RAAJAN T
-#### Reg. No. - 212223100043
 
 ### Folder before deleting the files
 
