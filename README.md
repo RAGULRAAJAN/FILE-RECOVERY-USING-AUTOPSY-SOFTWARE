@@ -1,6 +1,20 @@
-# Using-the-Autopsy-retrieve-the-deleted-files
-## AIM:
-To use Autopsy in Kali Linux to retrieve and analyze deleted files from a disk image.
+# FILE-RECOVERY-USING-AUTOPSY-SOFTWARE
+
+## AIM
+To use **Autopsy Digital Forensics Tool** to retrieve deleted files from a disk image.
+
+---
+
+## REQUIREMENTS
+- **Operating System**: Windows 10/11, macOS, or Linux
+- **Tool**: [Autopsy Digital Forensics](https://www.autopsy.com/)  
+- **Test Data**: Disk image file (`disk.dd`, `disk.img`, `.E01`)
+
+---
+
+## ARCHITECTURE DIAGRAM
+
+<img width="577" height="785" alt="Screenshot 2025-08-22 151258" src="https://github.com/user-attachments/assets/0e9e4744-5534-4828-8715-d6210ba065c3" />
 
 ## DESIGN STEPS:
 ### Step 1:
@@ -13,78 +27,86 @@ Add a disk image as a data source and let Autopsy analyze the content.
 Navigate to the "Deleted Files" section in Autopsy and examine or recover the deleted files.
 
 ## PROGRAM:
-Autopsy Deleted File Recovery Steps
+### **1. Copy Files to the Virtual Disk**  
+- Open **File Explorer** → Go to the new drive (`C: or D:`), where the folder created in the New Virtual Disk
+- Create a new folder (`Autospy`) and copy **images or files** into it.  
 
-# Step 1: Launch Autopsy
-autopsy
-It opens your browser at: http://localhost:9999
- 
-# Step 2: Create a New Case
-Click "Create New Case".
+### **2. Delete the Files**  
+- Select any one or two images → Press **Delete**.  
+- Empty the **Recycle Bin** to permanently delete them.  
 
-Enter a Case Name (e.g., FileRecoveryTest).
+### **3. Recover Deleted Files Using Autopsy**  
+### **Open Autopsy & Create a New Case** 
 
-Enter any optional details (e.g., Examiner name).
+- Launch **Autopsy** and **Run as a administrator**  
+- Click **Create New Case**.  
 
-Choose a Case Directory (e.g., /home/kali/Documents/AutopsyCases).
+<img width="612" height="421" alt="a1" src="https://github.com/user-attachments/assets/b708135b-a982-48cd-a201-7bf8d571e78e" />
 
-Click "Finish".
+- Enter a **Case Name** (e.g., `Autopsy1`).  
+- Choose a **Case Folder** location.  
+- Click **Next** → Click **Finish**.  
 
-# Step 3: Add Data Source (Your Disk Image)
-Select "Add Data Source".
-
-Choose "Disk Image or VM File".
-
-Browse and select your image file: e.g., /home/kali/Downloads/disk.dd
-
-Choose the Time Zone (e.g., UTC or your local time).
-
-Click Next, then Finish.
-
-Autopsy will now ingest and analyze the image file.
-
-# Step 4: Navigate to Deleted Files
-After analysis completes:
-
-Go to the left pane → File Types or Data Artifacts.
-
-Navigate to:
-
-Views → Deleted Files
-Or:
-
-File Types → Unallocated Space / Deleted
-Autopsy will list deleted files that were found in unallocated space.
-
-# Step 5: Recover the Deleted Files
-Click on a deleted file you want to recover.
-
-View the file preview on the right (if supported, e.g., images or text).
-
-Right-click on the file → Extract File.
-Choose a location to save the recovered file (e.g., /home/kali/Recovered/).
-
-Repeat for other files.
-
-## OUTPUT:
-
-# Recovered Deleted File List and Details 
-
-![Screenshot 2025-04-25 135455](https://github.com/user-attachments/assets/3878b201-26a3-4880-9b0a-a377cde136ce)
-
-![Screenshot 2025-04-25 135514](https://github.com/user-attachments/assets/6db6f9fb-122a-4a8e-b01b-85faa7ab447f)
-
-![Screenshot 2025-04-25 135523](https://github.com/user-attachments/assets/a6060578-6446-4130-b8f0-f3d8f0760f29)
+<img width="976" height="573" alt="a2" src="https://github.com/user-attachments/assets/d1aafe35-8191-489d-9633-c7a1d4027958" />
 
 
-# MD5 Current And Orginal = Not Pass
+### **Add the Virtual Disk as an Evidence Source**  
+- Click **Add Data Source**  → **Select Host**
 
-![Screenshot 2025-04-25 135532](https://github.com/user-attachments/assets/f52d1e23-c738-495d-b5d2-408d4796a7da)
+<img width="1070" height="673" alt="a3" src="https://github.com/user-attachments/assets/64e38d5d-35b1-42ee-af04-a07705af103f" />
 
-# MD5 Current And Orginal = Pass
 
-![Screenshot 2025-04-25 135544](https://github.com/user-attachments/assets/536cca1c-f8d2-4e0d-a843-c795b2fd28c8)
+- Select **Local Disk** → **next** 
+
+<img width="1070" height="667" alt="a4" src="https://github.com/user-attachments/assets/afaabfeb-e422-4f9b-abce-d8a1178f8525" />
+
+
+- Select Disk → **Choose the VHD drive (`Drive1`)**
+
+<img width="1057" height="665" alt="a5" src="https://github.com/user-attachments/assets/aa0aea29-82bf-49e0-8aa2-e97fdb3c42d2" />
+
+
+- Click **Next** → Keep default settings → Click **Finish**.  
+- Wait for Autopsy to process the disk.  
+
+### **Recover Deleted Files**  
+- Go to **File Views** (left panel).  
+
+<img width="1915" height="745" alt="a6" src="https://github.com/user-attachments/assets/b20b9f02-1342-439c-951a-c44621474bd7" />
+
+
+
+
+<img width="1920" height="947" alt="Screenshot 2025-08-22 091716" src="https://github.com/user-attachments/assets/ed4d92b8-eddb-4ab7-8000-43b98ec6e485" />
+
+
+
+- Click **Deleted Files** → Find your deleted images.  
+- Right-click an image → Click **Extract File**.  
+
+- Select a folder to see the recovered files (e.g., `C:\forensic`).  
+- Image is recovered successfully.
+
+
+## Output :
+
+#### Name - RAGUL RAAJAN T
+#### Reg. No. - 212223100043
+
+### Folder before deleting the files
+
+<img width="970" height="188" alt="Screenshot 2025-08-22 091320" src="https://github.com/user-attachments/assets/d1700d45-07e9-4a7d-a46c-681420461766" />
+
+### Folder after deleting the files
+
+<img width="1157" height="242" alt="Screenshot 2025-08-22 154355" src="https://github.com/user-attachments/assets/052e0aac-c42d-421e-aba1-e8031bdd3ee5" />
+
+### Folder after extracting the deleted images using autopsy
+
+<img width="970" height="188" alt="Screenshot 2025-08-22 091320" src="https://github.com/user-attachments/assets/342802c8-6f29-4147-a847-e6cceeff0ac8" />
 
 
 ## RESULT:
+
 Deleted files were successfully retrieved and analyzed using Autopsy.
+
